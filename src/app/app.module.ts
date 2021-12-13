@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormTestComponent } from './form-test/form-test.component';
 import { SecondTestComponent } from './second-test/second-test.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { SecondTestComponent } from './second-test/second-test.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

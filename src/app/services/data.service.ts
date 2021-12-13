@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DataService {
-  data;
+  data: string[];
 
   constructor() {
     this.data = ['Apple iPhone XR', 'Samsung Galaxy S9', 'Nokia 9'];
@@ -16,5 +16,7 @@ export class DataService {
 
   addToData(name: string) {
     this.data.push(name);
+    console.log('Информация обновилась!!!');
+    console.log(this.data);
   }
 }
