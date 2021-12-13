@@ -11,14 +11,16 @@ export class FormTestComponent implements OnInit {
 
   constructor() {
     this.profileGroup = new FormGroup({
-      firstname: new FormControl('', Validators.required),
-      lastname: new FormControl(''),
+      firstname: new FormControl('', [Validators.required]),
+      lastname: new FormControl('', [Validators.required]),
+      age: new FormControl(10, [Validators.min(10), Validators.max(50)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
     });
   }
 
   ngOnInit(): void {}
 
   onSumbit() {
-    console.log(this.profileGroup)
+    console.log(this.profileGroup);
   }
 }

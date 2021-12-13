@@ -23,6 +23,32 @@
       </label>
     </div>
     <div>
+      <label for="">
+        Ваш возраст
+        <input type="number" name="age" formControlName="age" />
+      </label>
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          profileGroup.controls['age'].invalid &&
+          profileGroup.controls['age'].touched
+        "
+      >
+        Некорректный возраст. Должен быть от 10 до 50
+      </div>
+    </div>
+    <div>
+      <label for="">
+        Ваша почта
+        <input
+          type="email"
+          name="email"
+          placeholder="example@gmail.com"
+          formControlName="email"
+        />
+      </label>
+    </div>
+    <div>
       <button type="submit" [disabled]="!profileGroup.valid">
         Отправить форму
       </button>
