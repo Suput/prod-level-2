@@ -1,1 +1,31 @@
-<p>form-test works!</p>
+<div>
+  <form [formGroup]="profileGroup" (ngSubmit)="onSumbit()">
+    <div>
+      <label for="">
+        Ваше имя
+        <input
+          type="text"
+          name="firstname"
+          placeholder="Ваше имя"
+          formControlName="firstname"
+        />
+      </label>
+    </div>
+    <div>
+      <label for="">
+        Ваша фамилия
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Ваша фамилия"
+          formControlName="lastname"
+        />
+      </label>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!profileGroup.valid">
+        Отправить форму
+      </button>
+    </div>
+  </form>
+</div>

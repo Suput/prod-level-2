@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-test',
   templateUrl: './form-test.component.html',
-  styleUrls: ['./form-test.component.css']
+  styleUrls: ['./form-test.component.css'],
 })
 export class FormTestComponent implements OnInit {
+  profileGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    this.profileGroup = new FormGroup({
+      firstname: new FormControl('', Validators.required),
+      lastname: new FormControl(''),
+    });
   }
 
+  ngOnInit(): void {}
+
+  onSumbit() {
+    console.log(this.profileGroup)
+  }
 }

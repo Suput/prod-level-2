@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormTestComponent } from './form-test/form-test.component';
+import { SecondTestComponent } from './second-test/second-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormTestComponent
+    FormTestComponent,
+    SecondTestComponent
   ],
   imports: [
     BrowserModule,
