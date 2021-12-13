@@ -10,6 +10,15 @@
           formControlName="firstname"
         />
       </label>
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          profileGroup.controls['firstname'].invalid &&
+          profileGroup.controls['email'].touched
+        "
+      >
+        Данное поле должно быть заполнено
+      </div>
     </div>
     <div>
       <label for="">
@@ -21,6 +30,15 @@
           formControlName="lastname"
         />
       </label>
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          profileGroup.controls['lastname'].invalid &&
+          profileGroup.controls['email'].touched
+        "
+      >
+        Данное поле должно быть заполнено
+      </div>
     </div>
     <div>
       <label for="">
@@ -29,10 +47,7 @@
       </label>
       <div
         class="alert alert-danger"
-        *ngIf="
-          profileGroup.controls['age'].invalid &&
-          profileGroup.controls['age'].touched
-        "
+        *ngIf="profileGroup.controls['age'].invalid"
       >
         Некорректный возраст. Должен быть от 10 до 50
       </div>
@@ -47,6 +62,15 @@
           formControlName="email"
         />
       </label>
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          profileGroup.controls['email'].invalid &&
+          profileGroup.controls['email'].touched
+        "
+      >
+        Некорректный адрес почты
+      </div>
     </div>
     <div>
       <button type="submit" [disabled]="!profileGroup.valid">
