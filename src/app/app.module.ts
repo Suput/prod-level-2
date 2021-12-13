@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { FormTestComponent } from './form-test/form-test.component';
 import { SecondTestComponent } from './second-test/second-test.component';
 import { DataService } from './services/data.service';
+import { DataShowComponent } from './data-show/data-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormTestComponent,
-    SecondTestComponent
+    SecondTestComponent,
+    DataShowComponent
   ],
   imports: [
     BrowserModule,
