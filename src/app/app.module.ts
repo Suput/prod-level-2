@@ -8,13 +8,15 @@ import { FormTestComponent } from './form-test/form-test.component';
 import { SecondTestComponent } from './second-test/second-test.component';
 import { DataService } from './services/data.service';
 import { DataShowComponent } from './data-show/data-show.component';
+import { RouteTestComponent } from './route-test/route-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormTestComponent,
     SecondTestComponent,
-    DataShowComponent
+    DataShowComponent,
+    RouteTestComponent
   ],
   imports: [
     BrowserModule,
