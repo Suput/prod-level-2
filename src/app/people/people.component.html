@@ -1,0 +1,22 @@
+<div *ngFor="let person of people">
+  <div>
+    <a [routerLink]="'/person/' + person.id">
+      <div class="for-name">
+        {{ person.name }}
+      </div>
+      <div class="for-surname">
+        {{ person.surname }}
+      </div>
+    </a>
+  </div>
+  <div class="for-challengeName">
+    {{ person.challengeName }}
+  </div>
+  <div class="for-place">
+    {{ person.place }}
+  </div>
+  <div class="for-isWinner" *ngIf="person.isWinner">
+    {{ person.isWinner }}
+  </div>
+  <hr />
+</div>

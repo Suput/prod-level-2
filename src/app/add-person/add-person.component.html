@@ -1,0 +1,73 @@
+<div>
+  <form [formGroup]="personGroup" (ngSubmit)="create()">
+    <div>
+      <input type="text" placeholder="Введите имя" formControlName="name" />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          personGroup.controls['name'].invalid &&
+          personGroup.controls['name'].touched
+        "
+      >
+        Заполните имя
+      </div>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        placeholder="Введите фамилию"
+        formControlName="surname"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          personGroup.controls['surname'].invalid &&
+          personGroup.controls['surname'].touched
+        "
+      >
+        Заполните фамилию
+      </div>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        placeholder="Введите соревнование"
+        formControlName="challengeName"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          personGroup.controls['challengeName'].invalid &&
+          personGroup.controls['challengeName'].touched
+        "
+      >
+        Заполните название соревнования
+      </div>
+    </div>
+
+    <div>
+      <input type="text" placeholder="Введите место" formControlName="place" />
+      <div
+        class="alert alert-danger"
+        *ngIf="
+          personGroup.controls['place'].invalid &&
+          personGroup.controls['place'].touched
+        "
+      >
+        Заполните место
+      </div>
+    </div>
+
+    <div>
+      <label for="isWinner">
+        Победитель?
+        <input type="checkbox" formControlName="isWinner" id="isWinner" />
+      </label>
+    </div>
+    <button type="submit" [disabled]="!personGroup.valid">
+      Добавить участника
+    </button>
+  </form>
+</div>

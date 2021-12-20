@@ -9,6 +9,9 @@ import { SecondTestComponent } from './second-test/second-test.component';
 import { DataService } from './services/data.service';
 import { DataShowComponent } from './data-show/data-show.component';
 import { RouteTestComponent } from './route-test/route-test.component';
+import { PeopleComponent } from './people/people.component';
+import { PersonComponent } from './person/person.component';
+import { AddPersonComponent } from './add-person/add-person.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { RouteTestComponent } from './route-test/route-test.component';
     FormTestComponent,
     SecondTestComponent,
     DataShowComponent,
-    RouteTestComponent
+    RouteTestComponent,
+    PeopleComponent,
+    PersonComponent,
+    AddPersonComponent
   ],
   imports: [
     BrowserModule,
